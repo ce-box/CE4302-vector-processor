@@ -1,0 +1,267 @@
+# Reading pref.tcl
+# do processor_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch {C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/top.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:09 on Oct 25,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch" C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 10:55:09 on Oct 25,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch {C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/microprocessor.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:09 on Oct 25,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch" C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/microprocessor.sv 
+# -- Compiling module microprocessor
+# 
+# Top level modules:
+# 	microprocessor
+# End time: 10:55:09 on Oct 25,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch {C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/hazard.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:09 on Oct 25,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch" C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/hazard.sv 
+# -- Compiling module hazard
+# 
+# Top level modules:
+# 	hazard
+# End time: 10:55:09 on Oct 25,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch {C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/datapath.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:09 on Oct 25,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch" C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/datapath.sv 
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# End time: 10:55:10 on Oct 25,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch {C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/controller.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:10 on Oct 25,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch" C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/controller.sv 
+# -- Compiling module controller
+# 
+# Top level modules:
+# 	controller
+# End time: 10:55:10 on Oct 25,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch {C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/conditional.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:10 on Oct 25,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch" C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/conditional.sv 
+# -- Compiling module conditional
+# 
+# Top level modules:
+# 	conditional
+# End time: 10:55:10 on Oct 25,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks {C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/mux3.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:10 on Oct 25,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks" C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/mux3.sv 
+# -- Compiling module mux3
+# 
+# Top level modules:
+# 	mux3
+# End time: 10:55:10 on Oct 25,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks {C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/mux2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:10 on Oct 25,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks" C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/mux2.sv 
+# -- Compiling module mux2
+# 
+# Top level modules:
+# 	mux2
+# End time: 10:55:10 on Oct 25,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks {C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/floprc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:10 on Oct 25,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks" C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/floprc.sv 
+# -- Compiling module floprc
+# 
+# Top level modules:
+# 	floprc
+# End time: 10:55:11 on Oct 25,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks {C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/flopr.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:11 on Oct 25,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks" C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/flopr.sv 
+# -- Compiling module flopr
+# 
+# Top level modules:
+# 	flopr
+# End time: 10:55:11 on Oct 25,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks {C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/flopenrc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:11 on Oct 25,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks" C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/flopenrc.sv 
+# -- Compiling module flopenrc
+# 
+# Top level modules:
+# 	flopenrc
+# End time: 10:55:11 on Oct 25,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks {C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/flopenr.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:11 on Oct 25,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks" C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 10:55:11 on Oct 25,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks {C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/extend.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:11 on Oct 25,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks" C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/extend.sv 
+# -- Compiling module extend
+# 
+# Top level modules:
+# 	extend
+# End time: 10:55:11 on Oct 25,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks {C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/eqcmp.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:12 on Oct 25,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks" C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/eqcmp.sv 
+# -- Compiling module eqcmp
+# 
+# Top level modules:
+# 	eqcmp
+# End time: 10:55:12 on Oct 25,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks {C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/alu.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:12 on Oct 25,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks" C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/alu.sv 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 10:55:12 on Oct 25,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks {C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/adder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:12 on Oct 25,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks" C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/adder.sv 
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# End time: 10:55:12 on Oct 25,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/memories {C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/memories/imem.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:12 on Oct 25,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/memories" C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/memories/imem.sv 
+# -- Compiling module imem
+# 
+# Top level modules:
+# 	imem
+# End time: 10:55:12 on Oct 25,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/memories {C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/memories/dmem.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:12 on Oct 25,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/memories" C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/memories/dmem.sv 
+# -- Compiling module dmem
+# 
+# Top level modules:
+# 	dmem
+# End time: 10:55:13 on Oct 25,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks {C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/register_file.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:13 on Oct 25,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks" C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/register_file.sv 
+# -- Compiling module register_file
+# 
+# Top level modules:
+# 	register_file
+# End time: 10:55:13 on Oct 25,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/../hdl/geo_isa/microarch {C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/../hdl/geo_isa/microarch/top.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:13 on Oct 25,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/../hdl/geo_isa/microarch" C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/../hdl/geo_isa/microarch/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 10:55:13 on Oct 25,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/../tests/geo {C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/../tests/geo/top_geo_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:13 on Oct 25,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/../tests/geo" C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/../tests/geo/top_geo_tb.sv 
+# -- Compiling module top_geo_tb
+# 
+# Top level modules:
+# 	top_geo_tb
+# End time: 10:55:13 on Oct 25,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  top_geo_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" top_geo_tb 
+# Start time: 10:55:13 on Oct 25,2021
+# Loading sv_std.std
+# Loading work.top_geo_tb
+# Loading work.top
+# Loading work.microprocessor
+# Loading work.controller
+# Loading work.floprc
+# Loading work.flopr
+# Loading work.conditional
+# Loading work.datapath
+# Loading work.mux2
+# Loading work.flopenr
+# Loading work.adder
+# Loading work.flopenrc
+# Loading work.register_file
+# Loading work.extend
+# Loading work.mux3
+# Loading work.alu
+# Loading work.eqcmp
+# Loading work.hazard
+# Loading work.imem
+# Loading work.dmem
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: kstro  Hostname: DESKTOP-INDTDDP  ProcessID: 9632
+#           Attempting to use alternate WLF file "./wlftw248ev".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftw248ev
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 65537 of file "rom.mem". (Current address [65536], address range [0:65535])    : C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/memories/dmem.sv(14)
+#    Time: 0 ps  Iteration: 0  Instance: /top_geo_tb/cpu/ram
+# ** Note: $stop    : C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/../tests/geo/top_geo_tb.sv(34)
+#    Time: 5022 ps  Iteration: 0  Instance: /top_geo_tb
+# Break in Module top_geo_tb at C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/../tests/geo/top_geo_tb.sv line 34
+# End time: 10:58:52 on Oct 25,2021, Elapsed time: 0:03:39
+# Errors: 0, Warnings: 3

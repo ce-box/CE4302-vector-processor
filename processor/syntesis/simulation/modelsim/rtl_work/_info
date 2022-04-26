@@ -1,0 +1,531 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/simulation/modelsim
+vadder
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1635180912
+!i10b 1
+!s100 >LKmEChYZb@V4ZcIG=S2i0
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IGOfzTzTYCXnYKgDc2@AQh0
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1635112450
+8C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/adder.sv
+FC:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/adder.sv
+!i122 15
+L0 1 6
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1635180912.000000
+!s107 C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks|C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/adder.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks
+Z9 tCvgOpt 0
+valu
+R1
+R2
+!i10b 1
+!s100 _=dY:Bizaf91[M=zU0B]f0
+R3
+IXb69mk4Y761i;ScQo73KH2
+R4
+S1
+R0
+w1635147401
+8C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/alu.sv
+FC:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/alu.sv
+!i122 14
+L0 1 31
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/alu.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks|C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/alu.sv|
+!i113 1
+R7
+R8
+R9
+vconditional
+R1
+Z10 !s110 1635180910
+!i10b 1
+!s100 2Yfj:lbmAaX16Z6UQh?S;3
+R3
+IA21RI0]hDJ?A]AFg8Q<530
+R4
+S1
+R0
+w1635112595
+8C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/conditional.sv
+FC:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/conditional.sv
+!i122 5
+Z11 L0 1 39
+R5
+r1
+!s85 0
+31
+Z12 !s108 1635180910.000000
+!s107 C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/conditional.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch|C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/conditional.sv|
+!i113 1
+R7
+Z13 !s92 -sv -work work +incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch
+R9
+vcontroller
+R1
+R10
+!i10b 1
+!s100 =1k?2CPA;OBg`<eTcZTLj2
+R3
+IJZUo8L6`96fCXnaT?A_fS0
+R4
+S1
+R0
+w1635172158
+8C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/controller.sv
+FC:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/controller.sv
+!i122 4
+L0 1 107
+R5
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/controller.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch|C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/controller.sv|
+!i113 1
+R7
+R13
+R9
+vdatapath
+R1
+R10
+!i10b 1
+!s100 W5G9;08Oz24nV3YJg45Am3
+R3
+IWT=;bl>i<?kVYj;II3K_32
+R4
+S1
+R0
+w1635172135
+8C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/datapath.sv
+FC:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/datapath.sv
+!i122 3
+L0 1 78
+R5
+r1
+!s85 0
+31
+Z14 !s108 1635180909.000000
+!s107 C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/datapath.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch|C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/datapath.sv|
+!i113 1
+R7
+R13
+R9
+vdmem
+R1
+Z15 !s110 1635180913
+!i10b 1
+!s100 U^i2kahFmCo40m4Yh6j]E0
+R3
+ISYYM4OP_CBM9DLdXDE]910
+R4
+S1
+R0
+w1635180695
+8C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/memories/dmem.sv
+FC:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/memories/dmem.sv
+!i122 17
+L0 1 27
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/memories/dmem.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/memories|C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/memories/dmem.sv|
+!i113 1
+R7
+Z16 !s92 -sv -work work +incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/memories
+R9
+veqcmp
+R1
+R2
+!i10b 1
+!s100 hPEK1>h0AYF29[6FAe]ZZ3
+R3
+IU0eKz0041:FFfW5YSlO2I1
+R4
+S1
+R0
+Z17 w1635048946
+8C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/eqcmp.sv
+FC:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/eqcmp.sv
+!i122 13
+Z18 L0 1 8
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/eqcmp.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks|C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/eqcmp.sv|
+!i113 1
+R7
+R8
+R9
+vextend
+R1
+Z19 !s110 1635180911
+!i10b 1
+!s100 KhP6W2MY0nTmmbZiGDUA03
+R3
+Ie3kFK8fAF1UkVdkOK3<<P1
+R4
+S1
+R0
+w1635172475
+8C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/extend.sv
+FC:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/extend.sv
+!i122 12
+L0 1 21
+R5
+r1
+!s85 0
+31
+Z20 !s108 1635180911.000000
+!s107 C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/extend.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks|C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/extend.sv|
+!i113 1
+R7
+R8
+R9
+vflopenr
+R1
+R19
+!i10b 1
+!s100 V<Do[`gb;GGXYHmUXQLaD1
+R3
+ITTK^@SUF^Mk:L_;ahT>O[0
+R4
+S1
+R0
+R17
+8C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/flopenr.sv
+FC:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/flopenr.sv
+!i122 11
+Z21 L0 1 11
+R5
+r1
+!s85 0
+31
+R20
+!s107 C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/flopenr.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks|C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/flopenr.sv|
+!i113 1
+R7
+R8
+R9
+vflopenrc
+R1
+R19
+!i10b 1
+!s100 `RhSTlfN]J1o4nHBKKF:`0
+R3
+I[2kbI3@I:YE5?bhaR8O_A2
+R4
+S1
+R0
+w1635088891
+8C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/flopenrc.sv
+FC:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/flopenrc.sv
+!i122 10
+R21
+R5
+r1
+!s85 0
+31
+R20
+!s107 C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/flopenrc.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks|C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/flopenrc.sv|
+!i113 1
+R7
+R8
+R9
+vflopr
+R1
+R19
+!i10b 1
+!s100 XomVnncF?X?inYGAhNTOz3
+R3
+IecRDLC[0L?WCZd]z783]70
+R4
+S1
+R0
+w1635098412
+8C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/flopr.sv
+FC:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/flopr.sv
+!i122 9
+R21
+R5
+r1
+!s85 0
+31
+R20
+!s107 C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/flopr.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks|C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/flopr.sv|
+!i113 1
+R7
+R8
+R9
+vfloprc
+R1
+R19
+!i10b 1
+!s100 @CJo]_B:LCgPNcH3ABBid0
+R3
+IHPbo3nh_lK6G:OLZ<D??K1
+R4
+S1
+R0
+w1635088894
+8C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/floprc.sv
+FC:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/floprc.sv
+!i122 8
+R21
+R5
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/floprc.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks|C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/floprc.sv|
+!i113 1
+R7
+R8
+R9
+vhazard
+R1
+Z22 !s110 1635180909
+!i10b 1
+!s100 3d^P:6BXQeIkoY<Tj^^UL3
+R3
+II0ogQUfz1;M[dz1G`kIE<3
+R4
+S1
+R0
+w1635112542
+8C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/hazard.sv
+FC:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/hazard.sv
+!i122 2
+R11
+R5
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/hazard.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch|C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/hazard.sv|
+!i113 1
+R7
+R13
+R9
+vimem
+R1
+R2
+!i10b 1
+!s100 MF0gmgmGVzY^mN?5@9aaC2
+R3
+IKa>A0LV33L7PgWQ9>aIG32
+R4
+S1
+R0
+w1635175427
+8C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/memories/imem.sv
+FC:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/memories/imem.sv
+!i122 16
+L0 1 12
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/memories/imem.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/memories|C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/memories/imem.sv|
+!i113 1
+R7
+R16
+R9
+vmicroprocessor
+R1
+R22
+!i10b 1
+!s100 Y]k^amgM<N<KNf:C@7j?U1
+R3
+ITPSFS8^<h5akYRXhizdL^2
+R4
+S1
+R0
+w1635172186
+8C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/microprocessor.sv
+FC:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/microprocessor.sv
+!i122 1
+L0 1 45
+R5
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/microprocessor.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch|C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/microarch/microprocessor.sv|
+!i113 1
+R7
+R13
+R9
+vmux2
+R1
+R10
+!i10b 1
+!s100 EeeV]_Bk[E@J[D70>@j[A3
+R3
+In4bzhnTHRciXbh<2NIc7W1
+R4
+S1
+R0
+w1635098369
+8C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/mux2.sv
+FC:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/mux2.sv
+!i122 7
+R18
+R5
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/mux2.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks|C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/mux2.sv|
+!i113 1
+R7
+R8
+R9
+vmux3
+R1
+R10
+!i10b 1
+!s100 Y<45[GHJM_NmWB?m16Z0Y0
+R3
+IYYALHkQ;l@mFVbd25J=n:0
+R4
+S1
+R0
+w1635098360
+8C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/mux3.sv
+FC:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/mux3.sv
+!i122 6
+Z23 L0 1 20
+R5
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/mux3.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks|C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/mux3.sv|
+!i113 1
+R7
+R8
+R9
+vregister_file
+R1
+R15
+!i10b 1
+!s100 n3[egVG]olZdUP@kV3B:K0
+R3
+I38eIRQc9C_V5LTYJ5^j:D0
+R4
+S1
+R0
+w1635105341
+8C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/register_file.sv
+FC:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/register_file.sv
+!i122 18
+R23
+R5
+r1
+!s85 0
+31
+Z24 !s108 1635180913.000000
+!s107 C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/register_file.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks|C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/geo_isa/generic_blocks/register_file.sv|
+!i113 1
+R7
+R8
+R9
+vtop
+R1
+R15
+!i10b 1
+!s100 AU3=^UQC5_R_REnabZ=m62
+R3
+I02[Wnd<8@;F>D`DIlm[l61
+R4
+S1
+R0
+w1635112635
+8C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/../hdl/geo_isa/microarch/top.sv
+FC:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/../hdl/geo_isa/microarch/top.sv
+!i122 19
+L0 1 34
+R5
+r1
+!s85 0
+31
+R24
+!s107 C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/../hdl/geo_isa/microarch/top.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/../hdl/geo_isa/microarch|C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/../hdl/geo_isa/microarch/top.sv|
+!i113 1
+R7
+!s92 -sv -work work +incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/../hdl/geo_isa/microarch
+R9
+vtop_geo_tb
+R1
+R15
+!i10b 1
+!s100 bDmB6P<l02[f3ab^=QX7l3
+R3
+I4?]D3O<W]hM1ai_Goo=i`2
+R4
+S1
+R0
+w1635115302
+8C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/../tests/geo/top_geo_tb.sv
+FC:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/../tests/geo/top_geo_tb.sv
+!i122 20
+L0 1 37
+R5
+r1
+!s85 0
+31
+R24
+!s107 C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/../tests/geo/top_geo_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/../tests/geo|C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/../tests/geo/top_geo_tb.sv|
+!i113 1
+R7
+!s92 -sv -work work +incdir+C:/Users/Usuario/Documents/tec/ce4104-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/../tests/geo
+R9

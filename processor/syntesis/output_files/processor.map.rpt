@@ -1,0 +1,1103 @@
+Analysis & Synthesis report for processor
+Sat Oct 23 22:10:40 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Registers Packed Into Inferred Megafunctions
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for dmem:ram|altsyncram:ram_rtl_0|altsyncram_a0q1:auto_generated
+ 15. Parameter Settings for User Entity Instance: arm:processor|datapath:dp|mux2:firstpcmux
+ 16. Parameter Settings for User Entity Instance: arm:processor|datapath:dp|mux2:secondpcmux
+ 17. Parameter Settings for User Entity Instance: arm:processor|datapath:dp|flopPC:PCFlip
+ 18. Parameter Settings for User Entity Instance: arm:processor|datapath:dp|adder:pcadder1
+ 19. Parameter Settings for User Entity Instance: arm:processor|datapath:dp|flopIF_ID:fIF_ID
+ 20. Parameter Settings for User Entity Instance: arm:processor|datapath:dp|mux2:ra1mux
+ 21. Parameter Settings for User Entity Instance: arm:processor|datapath:dp|mux2:ra2mux
+ 22. Parameter Settings for User Entity Instance: arm:processor|datapath:dp|flopID_Ex:fID_EX
+ 23. Parameter Settings for User Entity Instance: arm:processor|datapath:dp|mux3:rd1mux
+ 24. Parameter Settings for User Entity Instance: arm:processor|datapath:dp|mux3:rd2mux
+ 25. Parameter Settings for User Entity Instance: arm:processor|datapath:dp|mux2:srcbmux
+ 26. Parameter Settings for User Entity Instance: arm:processor|datapath:dp|alu:alu
+ 27. Parameter Settings for User Entity Instance: arm:processor|datapath:dp|alu:alu|mux2:adder_mux
+ 28. Parameter Settings for User Entity Instance: arm:processor|datapath:dp|alu:alu|adder:adder_alu
+ 29. Parameter Settings for User Entity Instance: arm:processor|datapath:dp|flopEX_MEM:fEX_MEM
+ 30. Parameter Settings for User Entity Instance: arm:processor|datapath:dp|flopMEM_WB:fMEM_WB
+ 31. Parameter Settings for User Entity Instance: arm:processor|datapath:dp|mux2:resmux
+ 32. Parameter Settings for User Entity Instance: arm:processor|datapath:dp|eqcmp:m0
+ 33. Parameter Settings for User Entity Instance: arm:processor|datapath:dp|eqcmp:m1
+ 34. Parameter Settings for User Entity Instance: arm:processor|datapath:dp|eqcmp:m2
+ 35. Parameter Settings for User Entity Instance: arm:processor|datapath:dp|eqcmp:m3
+ 36. Parameter Settings for User Entity Instance: arm:processor|datapath:dp|eqcmp:m4a
+ 37. Parameter Settings for User Entity Instance: arm:processor|datapath:dp|eqcmp:m4b
+ 38. Parameter Settings for Inferred Entity Instance: dmem:ram|altsyncram:ram_rtl_0
+ 39. altsyncram Parameter Settings by Entity Instance
+ 40. Port Connectivity Checks: "dmem:ram"
+ 41. Port Connectivity Checks: "arm:processor|datapath:dp|eqcmp:m3"
+ 42. Port Connectivity Checks: "arm:processor|datapath:dp|eqcmp:m2"
+ 43. Port Connectivity Checks: "arm:processor|datapath:dp|eqcmp:m1"
+ 44. Port Connectivity Checks: "arm:processor|datapath:dp|eqcmp:m0"
+ 45. Port Connectivity Checks: "arm:processor|datapath:dp|conditional:condUnit"
+ 46. Port Connectivity Checks: "arm:processor|datapath:dp|flopID_Ex:fID_EX"
+ 47. Port Connectivity Checks: "arm:processor|datapath:dp|mux2:ra1mux"
+ 48. Port Connectivity Checks: "arm:processor|datapath:dp|adder:pcadder1"
+ 49. Port Connectivity Checks: "arm:processor|datapath:dp|mux2:secondpcmux"
+ 50. Port Connectivity Checks: "arm:processor|datapath:dp|mux2:firstpcmux"
+ 51. Port Connectivity Checks: "arm:processor|datapath:dp"
+ 52. Port Connectivity Checks: "arm:processor|controller:c"
+ 53. Post-Synthesis Netlist Statistics for Top Partition
+ 54. Elapsed Time Per Partition
+ 55. Analysis & Synthesis Messages
+ 56. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++---------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sat Oct 23 22:10:40 2021           ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Standard Edition ;
+; Revision Name                   ; processor                                       ;
+; Top-level Entity Name           ; top_arm                                         ;
+; Family                          ; Cyclone V                                       ;
+; Logic utilization (in ALMs)     ; N/A                                             ;
+; Total registers                 ; 749                                             ;
+; Total pins                      ; 67                                              ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 8,192                                           ;
+; Total DSP Blocks                ; 0                                               ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0                                               ;
+; Total DLLs                      ; 0                                               ;
++---------------------------------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; top_arm            ; processor          ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                                                                                                                                                         ;
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                                                                                                                       ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                                                                                                     ; Library ;
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/conditional.sv    ; yes             ; User SystemVerilog HDL File            ; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/conditional.sv              ;         ;
+; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/flopPC.sv         ; yes             ; User SystemVerilog HDL File            ; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/flopPC.sv                   ;         ;
+; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/hazard.sv         ; yes             ; User SystemVerilog HDL File            ; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/hazard.sv                   ;         ;
+; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/datapath.sv       ; yes             ; User SystemVerilog HDL File            ; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/datapath.sv                 ;         ;
+; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/arm.sv            ; yes             ; User SystemVerilog HDL File            ; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/arm.sv                      ;         ;
+; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/register_file.sv  ; yes             ; User SystemVerilog HDL File            ; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/register_file.sv            ;         ;
+; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/mux2.sv           ; yes             ; User SystemVerilog HDL File            ; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/mux2.sv                     ;         ;
+; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/extend.sv         ; yes             ; User SystemVerilog HDL File            ; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/extend.sv                   ;         ;
+; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/alu.sv            ; yes             ; User SystemVerilog HDL File            ; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/alu.sv                      ;         ;
+; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/adder.sv          ; yes             ; User SystemVerilog HDL File            ; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/adder.sv                    ;         ;
+; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv                       ; yes             ; User SystemVerilog HDL File            ; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv                                 ;         ;
+; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/mem_blocks/dmem.sv               ; yes             ; User SystemVerilog HDL File            ; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/mem_blocks/dmem.sv                         ;         ;
+; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/mem_blocks/imem.sv               ; yes             ; User SystemVerilog HDL File            ; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/mem_blocks/imem.sv                         ;         ;
+; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/controller.sv     ; yes             ; User SystemVerilog HDL File            ; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/controller.sv               ;         ;
+; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/flopIF_ID.sv      ; yes             ; User SystemVerilog HDL File            ; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/flopIF_ID.sv                ;         ;
+; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/flopID_Ex.sv      ; yes             ; User SystemVerilog HDL File            ; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/flopID_Ex.sv                ;         ;
+; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/flopEX_MEM.sv     ; yes             ; User SystemVerilog HDL File            ; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/flopEX_MEM.sv               ;         ;
+; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/flopMEM_WB.sv     ; yes             ; User SystemVerilog HDL File            ; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/flopMEM_WB.sv               ;         ;
+; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/mux3.sv           ; yes             ; User SystemVerilog HDL File            ; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/mux3.sv                     ;         ;
+; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/eqcmp.sv          ; yes             ; User SystemVerilog HDL File            ; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/eqcmp.sv                    ;         ;
+; //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/mem_blocks/instructions_file.mem ; yes             ; Auto-Found Unspecified File            ; //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/mem_blocks/instructions_file.mem           ;         ;
+; //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/mem_blocks/rom.mem               ; yes             ; Auto-Found Unspecified File            ; //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/mem_blocks/rom.mem                         ;         ;
+; //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/generic_blocks/ref.mem           ; yes             ; Auto-Found Unspecified File            ; //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/generic_blocks/ref.mem                     ;         ;
+; altsyncram.tdf                                                                                                                                                         ; yes             ; Megafunction                           ; c:/intelfpga/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                                                                                                 ;         ;
+; stratix_ram_block.inc                                                                                                                                                  ; yes             ; Megafunction                           ; c:/intelfpga/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                                                                          ;         ;
+; lpm_mux.inc                                                                                                                                                            ; yes             ; Megafunction                           ; c:/intelfpga/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                                                                    ;         ;
+; lpm_decode.inc                                                                                                                                                         ; yes             ; Megafunction                           ; c:/intelfpga/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                                                                                                 ;         ;
+; aglobal201.inc                                                                                                                                                         ; yes             ; Megafunction                           ; c:/intelfpga/20.1/quartus/libraries/megafunctions/aglobal201.inc                                                                                                                 ;         ;
+; a_rdenreg.inc                                                                                                                                                          ; yes             ; Megafunction                           ; c:/intelfpga/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                                                                  ;         ;
+; altrom.inc                                                                                                                                                             ; yes             ; Megafunction                           ; c:/intelfpga/20.1/quartus/libraries/megafunctions/altrom.inc                                                                                                                     ;         ;
+; altram.inc                                                                                                                                                             ; yes             ; Megafunction                           ; c:/intelfpga/20.1/quartus/libraries/megafunctions/altram.inc                                                                                                                     ;         ;
+; altdpram.inc                                                                                                                                                           ; yes             ; Megafunction                           ; c:/intelfpga/20.1/quartus/libraries/megafunctions/altdpram.inc                                                                                                                   ;         ;
+; altsyncram_a0q1.tdf                                                                                                                                                    ; yes             ; Auto-Found AHDL File                   ; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/db/altsyncram_a0q1.tdf                ;         ;
+; db/processor.ram0_dmem_351e6b.hdl.mif                                                                                                                                  ; yes             ; Auto-Found Memory Initialization File  ; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/db/processor.ram0_dmem_351e6b.hdl.mif ;         ;
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 578       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 669       ;
+;     -- 7 input functions                    ; 1         ;
+;     -- 6 input functions                    ; 360       ;
+;     -- 5 input functions                    ; 155       ;
+;     -- 4 input functions                    ; 16        ;
+;     -- <=3 input functions                  ; 137       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 749       ;
+;                                             ;           ;
+; I/O pins                                    ; 67        ;
+; Total MLAB memory bits                      ; 0         ;
+; Total block memory bits                     ; 8192      ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 757       ;
+; Total fan-out                               ; 5954      ;
+; Average fan-out                             ; 3.82      ;
++---------------------------------------------+-----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                   ; Entity Name     ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------+-----------------+--------------+
+; |top_arm                                  ; 669 (0)             ; 749 (0)                   ; 8192              ; 0          ; 67   ; 0            ; |top_arm                                                              ; top_arm         ; work         ;
+;    |arm:processor|                        ; 643 (0)             ; 749 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |top_arm|arm:processor                                                ; arm             ; work         ;
+;       |controller:c|                      ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_arm|arm:processor|controller:c                                   ; controller      ; work         ;
+;       |datapath:dp|                       ; 625 (3)             ; 749 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |top_arm|arm:processor|datapath:dp                                    ; datapath        ; work         ;
+;          |adder:pcadder1|                 ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_arm|arm:processor|datapath:dp|adder:pcadder1                     ; adder           ; work         ;
+;          |alu:alu|                        ; 64 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_arm|arm:processor|datapath:dp|alu:alu                            ; alu             ; work         ;
+;             |adder:adder_alu|             ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_arm|arm:processor|datapath:dp|alu:alu|adder:adder_alu            ; adder           ; work         ;
+;          |eqcmp:m4a|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_arm|arm:processor|datapath:dp|eqcmp:m4a                          ; eqcmp           ; work         ;
+;          |eqcmp:m4b|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_arm|arm:processor|datapath:dp|eqcmp:m4b                          ; eqcmp           ; work         ;
+;          |extend:ext|                     ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_arm|arm:processor|datapath:dp|extend:ext                         ; extend          ; work         ;
+;          |flopEX_MEM:fEX_MEM|             ; 0 (0)               ; 71 (71)                   ; 0                 ; 0          ; 0    ; 0            ; |top_arm|arm:processor|datapath:dp|flopEX_MEM:fEX_MEM                 ; flopEX_MEM      ; work         ;
+;          |flopID_Ex:fID_EX|               ; 1 (1)               ; 101 (101)                 ; 0                 ; 0          ; 0    ; 0            ; |top_arm|arm:processor|datapath:dp|flopID_Ex:fID_EX                   ; flopID_Ex       ; work         ;
+;          |flopIF_ID:fIF_ID|               ; 0 (0)               ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |top_arm|arm:processor|datapath:dp|flopIF_ID:fIF_ID                   ; flopIF_ID       ; work         ;
+;          |flopMEM_WB:fMEM_WB|             ; 0 (0)               ; 39 (39)                   ; 0                 ; 0          ; 0    ; 0            ; |top_arm|arm:processor|datapath:dp|flopMEM_WB:fMEM_WB                 ; flopMEM_WB      ; work         ;
+;          |flopPC:PCFlip|                  ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |top_arm|arm:processor|datapath:dp|flopPC:PCFlip                      ; flopPC          ; work         ;
+;          |mux2:ra1mux|                    ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_arm|arm:processor|datapath:dp|mux2:ra1mux                        ; mux2            ; work         ;
+;          |mux2:ra2mux|                    ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_arm|arm:processor|datapath:dp|mux2:ra2mux                        ; mux2            ; work         ;
+;          |mux2:resmux|                    ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_arm|arm:processor|datapath:dp|mux2:resmux                        ; mux2            ; work         ;
+;          |mux2:srcbmux|                   ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_arm|arm:processor|datapath:dp|mux2:srcbmux                       ; mux2            ; work         ;
+;          |mux3:rd1mux|                    ; 38 (38)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_arm|arm:processor|datapath:dp|mux3:rd1mux                        ; mux3            ; work         ;
+;          |mux3:rd2mux|                    ; 65 (65)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_arm|arm:processor|datapath:dp|mux3:rd2mux                        ; mux3            ; work         ;
+;          |register_file:rf|               ; 337 (337)           ; 480 (480)                 ; 0                 ; 0          ; 0    ; 0            ; |top_arm|arm:processor|datapath:dp|register_file:rf                   ; register_file   ; work         ;
+;       |hazard:hz|                         ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_arm|arm:processor|hazard:hz                                      ; hazard          ; work         ;
+;    |dmem:ram|                             ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |top_arm|dmem:ram                                                     ; dmem            ; work         ;
+;       |altsyncram:ram_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |top_arm|dmem:ram|altsyncram:ram_rtl_0                                ; altsyncram      ; work         ;
+;          |altsyncram_a0q1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |top_arm|dmem:ram|altsyncram:ram_rtl_0|altsyncram_a0q1:auto_generated ; altsyncram_a0q1 ; work         ;
+;    |imem:imem|                            ; 26 (26)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_arm|imem:imem                                                    ; imem            ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                                                                                            ;
++-------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Name                                                                    ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                                                                                                                                                              ;
++-------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; dmem:ram|altsyncram:ram_rtl_0|altsyncram_a0q1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 1024         ; 8            ; --           ; --           ; 8192 ; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/db/processor.ram0_dmem_351e6b.hdl.mif ;
++-------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                 ;
++---------------------------------------------------------------+--------------------------------------------------------------------+
+; Register name                                                 ; Reason for Removal                                                 ;
++---------------------------------------------------------------+--------------------------------------------------------------------+
+; arm:processor|datapath:dp|flopMEM_WB:fMEM_WB|ReadDataW[8..31] ; Stuck at GND due to stuck port data_in                             ;
+; arm:processor|datapath:dp|flopID_Ex:fID_EX|flagsE[2]          ; Merged with arm:processor|datapath:dp|flopID_Ex:fID_EX|flagsE[3]   ;
+; arm:processor|datapath:dp|flopID_Ex:fID_EX|extImmE[26..31]    ; Merged with arm:processor|datapath:dp|flopID_Ex:fID_EX|extImmE[25] ;
+; arm:processor|datapath:dp|flopID_Ex:fID_EX|flagsE[3]          ; Stuck at GND due to stuck port data_in                             ;
+; arm:processor|datapath:dp|flopIF_ID:fIF_ID|InstrD[29,30]      ; Merged with arm:processor|datapath:dp|flopIF_ID:fIF_ID|InstrD[31]  ;
+; arm:processor|datapath:dp|flopIF_ID:fIF_ID|InstrD[8..10]      ; Merged with arm:processor|datapath:dp|flopIF_ID:fIF_ID|InstrD[11]  ;
+; arm:processor|datapath:dp|flopID_Ex:fID_EX|CondE[1,2]         ; Merged with arm:processor|datapath:dp|flopID_Ex:fID_EX|CondE[3]    ;
+; arm:processor|datapath:dp|flopID_Ex:fID_EX|flagsE[0,1]        ; Lost fanout                                                        ;
+; arm:processor|datapath:dp|flopID_Ex:fID_EX|FlagWriteE[0]      ; Lost fanout                                                        ;
+; arm:processor|datapath:dp|flopIF_ID:fIF_ID|InstrD[28]         ; Stuck at GND due to stuck port data_in                             ;
+; arm:processor|datapath:dp|flopID_Ex:fID_EX|CondE[0]           ; Stuck at GND due to stuck port data_in                             ;
+; arm:processor|datapath:dp|flopID_Ex:fID_EX|extImmE[11]        ; Merged with arm:processor|datapath:dp|flopID_Ex:fID_EX|extImmE[10] ;
+; arm:processor|datapath:dp|flopID_Ex:fID_EX|extImmE[13]        ; Merged with arm:processor|datapath:dp|flopID_Ex:fID_EX|extImmE[12] ;
+; Total Number of Removed Registers = 46                        ;                                                                    ;
++---------------------------------------------------------------+--------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                       ;
++------------------------------------------------------------+---------------------------+----------------------------------------------------------+
+; Register name                                              ; Reason for Removal        ; Registers Removed due to This Register                   ;
++------------------------------------------------------------+---------------------------+----------------------------------------------------------+
+; arm:processor|datapath:dp|flopMEM_WB:fMEM_WB|ReadDataW[31] ; Stuck at GND              ; arm:processor|datapath:dp|flopID_Ex:fID_EX|flagsE[3],    ;
+;                                                            ; due to stuck port data_in ; arm:processor|datapath:dp|flopID_Ex:fID_EX|flagsE[1],    ;
+;                                                            ;                           ; arm:processor|datapath:dp|flopID_Ex:fID_EX|flagsE[0],    ;
+;                                                            ;                           ; arm:processor|datapath:dp|flopID_Ex:fID_EX|FlagWriteE[0] ;
++------------------------------------------------------------+---------------------------+----------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 749   ;
+; Number of registers using Synchronous Clear  ; 64    ;
+; Number of registers using Synchronous Load   ; 64    ;
+; Number of registers using Asynchronous Clear ; 127   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 537   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                             ;
++--------------------------------------------------------------+--------------------+------+
+; Register Name                                                ; Megafunction       ; Type ;
++--------------------------------------------------------------+--------------------+------+
+; arm:processor|datapath:dp|flopMEM_WB:fMEM_WB|ReadDataW[0..7] ; dmem:ram|ram_rtl_0 ; RAM  ;
++--------------------------------------------------------------+--------------------+------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_arm|arm:processor|datapath:dp|flopID_Ex:fID_EX|extImmE[10] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_arm|arm:processor|datapath:dp|flopID_Ex:fID_EX|extImmE[8]  ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |top_arm|arm:processor|datapath:dp|mux3:rd2mux|Mux19            ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |top_arm|arm:processor|datapath:dp|mux3:rd1mux|Mux28            ;
+; 8:1                ; 32 bits   ; 160 LEs       ; 128 LEs              ; 32 LEs                 ; No         ; |top_arm|arm:processor|datapath:dp|alu:alu|Mux5                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Source assignments for dmem:ram|altsyncram:ram_rtl_0|altsyncram_a0q1:auto_generated ;
++---------------------------------+--------------------+------+-----------------------+
+; Assignment                      ; Value              ; From ; To                    ;
++---------------------------------+--------------------+------+-----------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                     ;
++---------------------------------+--------------------+------+-----------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:processor|datapath:dp|mux2:firstpcmux ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:processor|datapath:dp|mux2:secondpcmux ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:processor|datapath:dp|flopPC:PCFlip ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:processor|datapath:dp|adder:pcadder1 ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:processor|datapath:dp|flopIF_ID:fIF_ID ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:processor|datapath:dp|mux2:ra1mux ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:processor|datapath:dp|mux2:ra2mux ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:processor|datapath:dp|flopID_Ex:fID_EX ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:processor|datapath:dp|mux3:rd1mux ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:processor|datapath:dp|mux3:rd2mux ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:processor|datapath:dp|mux2:srcbmux ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:processor|datapath:dp|alu:alu ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; M              ; 32    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:processor|datapath:dp|alu:alu|mux2:adder_mux ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                       ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:processor|datapath:dp|alu:alu|adder:adder_alu ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:processor|datapath:dp|flopEX_MEM:fEX_MEM ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:processor|datapath:dp|flopMEM_WB:fMEM_WB ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:processor|datapath:dp|mux2:resmux ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:processor|datapath:dp|eqcmp:m0 ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:processor|datapath:dp|eqcmp:m1 ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:processor|datapath:dp|eqcmp:m2 ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:processor|datapath:dp|eqcmp:m3 ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:processor|datapath:dp|eqcmp:m4a ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:processor|datapath:dp|eqcmp:m4b ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: dmem:ram|altsyncram:ram_rtl_0                                                                                                                                                         ;
++------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------+
+; Parameter Name                     ; Value                                                                                                                                                                            ; Type           ;
++------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------+
+; BYTE_SIZE_BLOCK                    ; 8                                                                                                                                                                                ; Untyped        ;
+; AUTO_CARRY_CHAINS                  ; ON                                                                                                                                                                               ; AUTO_CARRY     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                                                                                                                                                              ; IGNORE_CARRY   ;
+; AUTO_CASCADE_CHAINS                ; ON                                                                                                                                                                               ; AUTO_CASCADE   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                                                                                                                                                              ; IGNORE_CASCADE ;
+; WIDTH_BYTEENA                      ; 1                                                                                                                                                                                ; Untyped        ;
+; OPERATION_MODE                     ; ROM                                                                                                                                                                              ; Untyped        ;
+; WIDTH_A                            ; 8                                                                                                                                                                                ; Untyped        ;
+; WIDTHAD_A                          ; 10                                                                                                                                                                               ; Untyped        ;
+; NUMWORDS_A                         ; 1024                                                                                                                                                                             ; Untyped        ;
+; OUTDATA_REG_A                      ; UNREGISTERED                                                                                                                                                                     ; Untyped        ;
+; ADDRESS_ACLR_A                     ; NONE                                                                                                                                                                             ; Untyped        ;
+; OUTDATA_ACLR_A                     ; NONE                                                                                                                                                                             ; Untyped        ;
+; WRCONTROL_ACLR_A                   ; NONE                                                                                                                                                                             ; Untyped        ;
+; INDATA_ACLR_A                      ; NONE                                                                                                                                                                             ; Untyped        ;
+; BYTEENA_ACLR_A                     ; NONE                                                                                                                                                                             ; Untyped        ;
+; WIDTH_B                            ; 1                                                                                                                                                                                ; Untyped        ;
+; WIDTHAD_B                          ; 1                                                                                                                                                                                ; Untyped        ;
+; NUMWORDS_B                         ; 1                                                                                                                                                                                ; Untyped        ;
+; INDATA_REG_B                       ; CLOCK1                                                                                                                                                                           ; Untyped        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                                                                                                                                                           ; Untyped        ;
+; RDCONTROL_REG_B                    ; CLOCK1                                                                                                                                                                           ; Untyped        ;
+; ADDRESS_REG_B                      ; CLOCK1                                                                                                                                                                           ; Untyped        ;
+; OUTDATA_REG_B                      ; UNREGISTERED                                                                                                                                                                     ; Untyped        ;
+; BYTEENA_REG_B                      ; CLOCK1                                                                                                                                                                           ; Untyped        ;
+; INDATA_ACLR_B                      ; NONE                                                                                                                                                                             ; Untyped        ;
+; WRCONTROL_ACLR_B                   ; NONE                                                                                                                                                                             ; Untyped        ;
+; ADDRESS_ACLR_B                     ; NONE                                                                                                                                                                             ; Untyped        ;
+; OUTDATA_ACLR_B                     ; NONE                                                                                                                                                                             ; Untyped        ;
+; RDCONTROL_ACLR_B                   ; NONE                                                                                                                                                                             ; Untyped        ;
+; BYTEENA_ACLR_B                     ; NONE                                                                                                                                                                             ; Untyped        ;
+; WIDTH_BYTEENA_A                    ; 1                                                                                                                                                                                ; Untyped        ;
+; WIDTH_BYTEENA_B                    ; 1                                                                                                                                                                                ; Untyped        ;
+; RAM_BLOCK_TYPE                     ; AUTO                                                                                                                                                                             ; Untyped        ;
+; BYTE_SIZE                          ; 8                                                                                                                                                                                ; Untyped        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                                                                                                        ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                                                                                                                                                             ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                                                                                                                                                             ; Untyped        ;
+; INIT_FILE                          ; //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/db/processor.ram0_dmem_351e6b.hdl.mif ; Untyped        ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                                                                                                                                                           ; Untyped        ;
+; MAXIMUM_DEPTH                      ; 0                                                                                                                                                                                ; Untyped        ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                                                                                                                                                                           ; Untyped        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                                                                                                                                                           ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                                                                                                                                                           ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                                                                                                                                                           ; Untyped        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                                                                                                                                                                  ; Untyped        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                                                                                                                                                                  ; Untyped        ;
+; ENABLE_ECC                         ; FALSE                                                                                                                                                                            ; Untyped        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                                                                                                                                                            ; Untyped        ;
+; WIDTH_ECCSTATUS                    ; 3                                                                                                                                                                                ; Untyped        ;
+; DEVICE_FAMILY                      ; Cyclone V                                                                                                                                                                        ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_a0q1                                                                                                                                                                  ; Untyped        ;
++------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                          ;
++-------------------------------------------+-------------------------------+
+; Name                                      ; Value                         ;
++-------------------------------------------+-------------------------------+
+; Number of entity instances                ; 1                             ;
+; Entity Instance                           ; dmem:ram|altsyncram:ram_rtl_0 ;
+;     -- OPERATION_MODE                     ; ROM                           ;
+;     -- WIDTH_A                            ; 8                             ;
+;     -- NUMWORDS_A                         ; 1024                          ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                  ;
+;     -- WIDTH_B                            ; 1                             ;
+;     -- NUMWORDS_B                         ; 1                             ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                        ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                  ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                          ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                     ;
++-------------------------------------------+-------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "dmem:ram"                                                                                                                                                                              ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; data_in  ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (8 bits) it drives.  The 24 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; data_out ; Output ; Warning  ; Output or bidir port (8 bits) is smaller than the port expression (32 bits) it drives.  The 24 most-significant bit(s) in the port expression will be connected to GND.            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "arm:processor|datapath:dp|eqcmp:m3"                                                                                                                                               ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; b    ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "arm:processor|datapath:dp|eqcmp:m2"                                                                                                                                               ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; b    ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "arm:processor|datapath:dp|eqcmp:m1"                                                                                                                                               ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; b    ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "arm:processor|datapath:dp|eqcmp:m0"                                                                                                                                               ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; b    ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "arm:processor|datapath:dp|conditional:condUnit"                                                                                                         ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                            ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+; FlagsWrite ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (2 bits) it drives.  Extra input bit(s) "FlagsWrite[1..1]" will be connected to GND. ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "arm:processor|datapath:dp|flopID_Ex:fID_EX"                                                                                         ;
++------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                       ;
++------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+; ALUSrcE    ; Output ; Warning  ; Output or bidir port (2 bits) is wider than the port expression (1 bits) it drives; bit(s) "ALUSrcE[1..1]" have no fanouts    ;
+; FlagWriteE ; Output ; Warning  ; Output or bidir port (2 bits) is wider than the port expression (1 bits) it drives; bit(s) "FlagWriteE[1..1]" have no fanouts ;
++------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "arm:processor|datapath:dp|mux2:ra1mux" ;
++------+-------+----------+-----------------------------------------+
+; Port ; Type  ; Severity ; Details                                 ;
++------+-------+----------+-----------------------------------------+
+; d1   ; Input ; Info     ; Stuck at VCC                            ;
++------+-------+----------+-----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "arm:processor|datapath:dp|adder:pcadder1"                                               ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; b[31..3] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[2]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; cin      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cout     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "arm:processor|datapath:dp|mux2:secondpcmux"                                                                                                 ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; d0   ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "d0[31..1]" will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "arm:processor|datapath:dp|mux2:firstpcmux"                                                                             ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
+; y    ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "y[31..1]" have no fanouts ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "arm:processor|datapath:dp"                                                                                                                                  ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                                                                                            ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+; ALUSrcD       ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (2 bits) it drives.  Extra input bit(s) "ALUSrcD[1..1]" will be connected to GND.    ;
+; FlagWriteD    ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (2 bits) it drives.  Extra input bit(s) "FlagWriteD[1..1]" will be connected to GND. ;
+; InstrD[11..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                ;
+; MemWriteM     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "arm:processor|controller:c"                                                                                                         ;
++------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                       ;
++------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+; FlagWriteD ; Output ; Warning  ; Output or bidir port (2 bits) is wider than the port expression (1 bits) it drives; bit(s) "FlagWriteD[1..1]" have no fanouts ;
++------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 749                         ;
+;     CLR               ; 25                          ;
+;     CLR SCLR          ; 12                          ;
+;     CLR SLD           ; 64                          ;
+;     ENA               ; 480                         ;
+;     ENA CLR           ; 5                           ;
+;     ENA CLR SCLR      ; 21                          ;
+;     ENA SCLR          ; 31                          ;
+;     plain             ; 111                         ;
+; arriav_lcell_comb     ; 670                         ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 607                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 34                          ;
+;         3 data inputs ; 40                          ;
+;         4 data inputs ; 16                          ;
+;         5 data inputs ; 155                         ;
+;         6 data inputs ; 360                         ;
+;     shared            ; 62                          ;
+;         1 data inputs ; 30                          ;
+;         3 data inputs ; 32                          ;
+; boundary_port         ; 67                          ;
+; stratixv_ram_block    ; 8                           ;
+;                       ;                             ;
+; Max LUT depth         ; 8.10                        ;
+; Average LUT depth     ; 3.78                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:03     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
+    Info: Processing started: Sat Oct 23 22:10:16 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processor -c processor
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/tests/eqcmp_test.sv
+    Info (12023): Found entity 1: eqcmp_test File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/tests/eqcmp_test.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/microprocessor/conditional.sv
+    Info (12023): Found entity 1: conditional File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/conditional.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/generic_blocks/floppc.sv
+    Info (12023): Found entity 1: flopPC File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/flopPC.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/tests/hazard_test.sv
+    Info (12023): Found entity 1: hazard_test File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/tests/hazard_test.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/microprocessor/hazard.sv
+    Info (12023): Found entity 1: hazard File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/hazard.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/tests/toparm_tb.sv
+    Info (12023): Found entity 1: toparm_tb File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/tests/toparm_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/main.sv
+    Info (12023): Found entity 1: main File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/main.sv Line: 1
+Warning (12019): Can't analyze file -- file //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/vga_controller/VGA.sv is missing
+Warning (12019): Can't analyze file -- file //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/vga_controller/character_writer.sv is missing
+Warning (12019): Can't analyze file -- file //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/vga_controller/character_selector.sv is missing
+Warning (12019): Can't analyze file -- file //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/vga_controller/character_rom.sv is missing
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/microprocessor/datapath.sv
+    Info (12023): Found entity 1: datapath File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/datapath.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/microprocessor/arm.sv
+    Info (12023): Found entity 1: arm File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/arm.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/generic_blocks/register_file.sv
+    Info (12023): Found entity 1: register_file File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/register_file.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/generic_blocks/mux2.sv
+    Info (12023): Found entity 1: mux2 File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/mux2.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/generic_blocks/flopr.sv
+    Info (12023): Found entity 1: flopr File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/flopr.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/generic_blocks/extend.sv
+    Info (12023): Found entity 1: extend File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/extend.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/generic_blocks/alu.sv
+    Info (12023): Found entity 1: alu File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/alu.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/generic_blocks/adder.sv
+    Info (12023): Found entity 1: adder File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/adder.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/top_arm.sv
+    Info (12023): Found entity 1: top_arm File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/mem_blocks/dmem.sv
+    Info (12023): Found entity 1: dmem File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/mem_blocks/dmem.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/mem_blocks/imem.sv
+    Info (12023): Found entity 1: imem File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/mem_blocks/imem.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/generic_blocks/flopenr.sv
+    Info (12023): Found entity 1: flopenr File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/flopenr.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/microprocessor/decoder.sv
+    Info (12023): Found entity 1: decoder File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/decoder.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/microprocessor/controller.sv
+    Info (12023): Found entity 1: controller File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/controller.sv Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/microprocessor/condlogic.sv
+    Info (12023): Found entity 1: condlogic File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/condlogic.sv Line: 1
+    Info (12023): Found entity 2: condcheck File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/condlogic.sv Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/generic_blocks/flopif_id.sv
+    Info (12023): Found entity 1: flopIF_ID File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/flopIF_ID.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/generic_blocks/flopid_ex.sv
+    Info (12023): Found entity 1: flopID_Ex File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/flopID_Ex.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/generic_blocks/flopex_mem.sv
+    Info (12023): Found entity 1: flopEX_MEM File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/flopEX_MEM.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/generic_blocks/flopmem_wb.sv
+    Info (12023): Found entity 1: flopMEM_WB File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/flopMEM_WB.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/generic_blocks/mux3.sv
+    Info (12023): Found entity 1: mux3 File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/mux3.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/tests/mux3_test.sv
+    Info (12023): Found entity 1: mux3_test File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/tests/mux3_test.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/tests/flopif_id_test.sv
+    Info (12023): Found entity 1: flopIF_ID_test File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/tests/flopIF_ID_test.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/tests/flopid_ex_test.sv
+    Info (12023): Found entity 1: flopID_EX_test File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/tests/flopID_EX_test.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/tests/flopex_mem_test.sv
+    Info (12023): Found entity 1: flopEX_MEM_test File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/tests/flopEX_MEM_test.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/tests/flopmem_wb_test.sv
+    Info (12023): Found entity 1: flopMEM_WB_test File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/tests/flopMEM_WB_test.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-20.04/home/ealvarado/documents/tec/ce4301-arquitectura-computadores/hdl-armv4-micro-arquitecture/processor/hdl/generic_blocks/eqcmp.sv
+    Info (12023): Found entity 1: eqcmp File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/eqcmp.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at datapath.sv(124): created implicit net for "PCNextOne" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/datapath.sv Line: 124
+Warning (10236): Verilog HDL Implicit Net warning at datapath.sv(184): created implicit net for "PCSrcTakenE" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/datapath.sv Line: 184
+Warning (10236): Verilog HDL Implicit Net warning at datapath.sv(185): created implicit net for "RegWriteTakenE" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/datapath.sv Line: 185
+Warning (10236): Verilog HDL Implicit Net warning at datapath.sv(186): created implicit net for "MemWriteTakenE" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/datapath.sv Line: 186
+Warning (10236): Verilog HDL Implicit Net warning at arm.sv(103): created implicit net for "Match_1E_M" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/arm.sv Line: 103
+Warning (10236): Verilog HDL Implicit Net warning at arm.sv(104): created implicit net for "Match_1E_W" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/arm.sv Line: 104
+Warning (10236): Verilog HDL Implicit Net warning at arm.sv(105): created implicit net for "Match_2E_M" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/arm.sv Line: 105
+Warning (10236): Verilog HDL Implicit Net warning at arm.sv(106): created implicit net for "Match_2E_W" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/arm.sv Line: 106
+Warning (10236): Verilog HDL Implicit Net warning at arm.sv(107): created implicit net for "Match_12D_E" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/arm.sv Line: 107
+Warning (10236): Verilog HDL Implicit Net warning at arm.sv(109): created implicit net for "BranchTakenE" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/arm.sv Line: 109
+Warning (10236): Verilog HDL Implicit Net warning at arm.sv(110): created implicit net for "PCSrcW" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/arm.sv Line: 110
+Warning (10236): Verilog HDL Implicit Net warning at arm.sv(111): created implicit net for "MemtoRegE" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/arm.sv Line: 111
+Warning (10236): Verilog HDL Implicit Net warning at arm.sv(113): created implicit net for "PCWrPendingF" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/arm.sv Line: 113
+Info (12127): Elaborating entity "top_arm" for the top level hierarchy
+Info (12128): Elaborating entity "arm" for hierarchy "arm:processor" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 19
+Warning (10034): Output port "MemWrite" at arm.sv(5) has no driver File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/arm.sv Line: 5
+Info (12128): Elaborating entity "controller" for hierarchy "arm:processor|controller:c" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/arm.sv Line: 65
+Warning (10272): Verilog HDL Case Statement warning at controller.sv(38): case item expression covers a value already covered by a previous case item File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/controller.sv Line: 38
+Info (12128): Elaborating entity "datapath" for hierarchy "arm:processor|datapath:dp" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/arm.sv Line: 113
+Info (12128): Elaborating entity "mux2" for hierarchy "arm:processor|datapath:dp|mux2:firstpcmux" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/datapath.sv Line: 124
+Info (12128): Elaborating entity "flopPC" for hierarchy "arm:processor|datapath:dp|flopPC:PCFlip" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/datapath.sv Line: 130
+Info (12128): Elaborating entity "adder" for hierarchy "arm:processor|datapath:dp|adder:pcadder1" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/datapath.sv Line: 132
+Info (12128): Elaborating entity "flopIF_ID" for hierarchy "arm:processor|datapath:dp|flopIF_ID:fIF_ID" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/datapath.sv Line: 137
+Info (12128): Elaborating entity "mux2" for hierarchy "arm:processor|datapath:dp|mux2:ra1mux" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/datapath.sv Line: 143
+Info (12128): Elaborating entity "register_file" for hierarchy "arm:processor|datapath:dp|register_file:rf" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/datapath.sv Line: 149
+Info (12128): Elaborating entity "extend" for hierarchy "arm:processor|datapath:dp|extend:ext" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/datapath.sv Line: 151
+Info (12128): Elaborating entity "flopID_Ex" for hierarchy "arm:processor|datapath:dp|flopID_Ex:fID_EX" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/datapath.sv Line: 162
+Info (12128): Elaborating entity "mux3" for hierarchy "arm:processor|datapath:dp|mux3:rd1mux" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/datapath.sv Line: 166
+Info (12128): Elaborating entity "alu" for hierarchy "arm:processor|datapath:dp|alu:alu" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/datapath.sv Line: 171
+Warning (10230): Verilog HDL assignment warning at alu.sv(36): truncated value with size 32 to match size of target (1) File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/alu.sv Line: 36
+Info (12128): Elaborating entity "conditional" for hierarchy "arm:processor|datapath:dp|conditional:condUnit" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/datapath.sv Line: 182
+Info (12128): Elaborating entity "flopEX_MEM" for hierarchy "arm:processor|datapath:dp|flopEX_MEM:fEX_MEM" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/datapath.sv Line: 196
+Info (12128): Elaborating entity "flopMEM_WB" for hierarchy "arm:processor|datapath:dp|flopMEM_WB:fMEM_WB" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/datapath.sv Line: 207
+Info (12128): Elaborating entity "eqcmp" for hierarchy "arm:processor|datapath:dp|eqcmp:m0" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/datapath.sv Line: 213
+Info (12128): Elaborating entity "hazard" for hierarchy "arm:processor|hazard:hz" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/microprocessor/arm.sv Line: 127
+Info (12128): Elaborating entity "imem" for hierarchy "imem:imem" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 24
+Warning (10850): Verilog HDL warning at imem.sv(7): number of words (25) in memory file does not match the number of elements in the address range [0:63] File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/mem_blocks/imem.sv Line: 7
+Warning (10030): Net "mem.data_a" at imem.sv(4) has no driver or initial value, using a default initial value '0' File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/mem_blocks/imem.sv Line: 4
+Warning (10030): Net "mem.waddr_a" at imem.sv(4) has no driver or initial value, using a default initial value '0' File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/mem_blocks/imem.sv Line: 4
+Warning (10030): Net "mem.we_a" at imem.sv(4) has no driver or initial value, using a default initial value '0' File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/mem_blocks/imem.sv Line: 4
+Info (12128): Elaborating entity "dmem" for hierarchy "dmem:ram" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 32
+Warning (10036): Verilog HDL or VHDL warning at dmem.sv(10): object "addr" assigned a value but never read File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/mem_blocks/dmem.sv Line: 10
+Warning (10036): Verilog HDL or VHDL warning at dmem.sv(11): object "done" assigned a value but never read File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/mem_blocks/dmem.sv Line: 11
+Warning (10850): Verilog HDL warning at dmem.sv(14): number of words (5) in memory file does not match the number of elements in the address range [0:1023] File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/mem_blocks/dmem.sv Line: 14
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "ReadData[31]" is missing source, defaulting to GND File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 7
+    Warning (12110): Net "ReadData[30]" is missing source, defaulting to GND File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 7
+    Warning (12110): Net "ReadData[29]" is missing source, defaulting to GND File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 7
+    Warning (12110): Net "ReadData[28]" is missing source, defaulting to GND File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 7
+    Warning (12110): Net "ReadData[27]" is missing source, defaulting to GND File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 7
+    Warning (12110): Net "ReadData[26]" is missing source, defaulting to GND File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 7
+    Warning (12110): Net "ReadData[25]" is missing source, defaulting to GND File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 7
+    Warning (12110): Net "ReadData[24]" is missing source, defaulting to GND File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 7
+    Warning (12110): Net "ReadData[23]" is missing source, defaulting to GND File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 7
+    Warning (12110): Net "ReadData[22]" is missing source, defaulting to GND File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 7
+    Warning (12110): Net "ReadData[21]" is missing source, defaulting to GND File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 7
+    Warning (12110): Net "ReadData[20]" is missing source, defaulting to GND File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 7
+    Warning (12110): Net "ReadData[19]" is missing source, defaulting to GND File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 7
+    Warning (12110): Net "ReadData[18]" is missing source, defaulting to GND File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 7
+    Warning (12110): Net "ReadData[17]" is missing source, defaulting to GND File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 7
+    Warning (12110): Net "ReadData[16]" is missing source, defaulting to GND File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 7
+    Warning (12110): Net "ReadData[15]" is missing source, defaulting to GND File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 7
+    Warning (12110): Net "ReadData[14]" is missing source, defaulting to GND File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 7
+    Warning (12110): Net "ReadData[13]" is missing source, defaulting to GND File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 7
+    Warning (12110): Net "ReadData[12]" is missing source, defaulting to GND File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 7
+    Warning (12110): Net "ReadData[11]" is missing source, defaulting to GND File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 7
+    Warning (12110): Net "ReadData[10]" is missing source, defaulting to GND File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 7
+    Warning (12110): Net "ReadData[9]" is missing source, defaulting to GND File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 7
+    Warning (12110): Net "ReadData[8]" is missing source, defaulting to GND File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 7
+Info (276014): Found 2 instances of uninferred RAM logic
+    Info (276004): RAM logic "imem:imem|mem" is uninferred due to inappropriate RAM size File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/mem_blocks/imem.sv Line: 4
+    Info (276007): RAM logic "arm:processor|datapath:dp|register_file:rf|rf" is uninferred due to asynchronous read logic File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/generic_blocks/register_file.sv Line: 8
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "//wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/db/processor.ram0_imem_37c714.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Critical Warning (127005): Memory depth (16) in the design file differs from memory depth (15) in the Memory Initialization File "//wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/db/processor.ram0_register_file_87c776fc.hdl.mif" -- setting initial value for remaining addresses to 0
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "dmem:ram|ram_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to ROM
+        Info (286033): Parameter WIDTH_A set to 8
+        Info (286033): Parameter WIDTHAD_A set to 10
+        Info (286033): Parameter NUMWORDS_A set to 1024
+        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_A set to NONE
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/db/processor.ram0_dmem_351e6b.hdl.mif
+Info (12130): Elaborated megafunction instantiation "dmem:ram|altsyncram:ram_rtl_0"
+Info (12133): Instantiated megafunction "dmem:ram|altsyncram:ram_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "ROM"
+    Info (12134): Parameter "WIDTH_A" = "8"
+    Info (12134): Parameter "WIDTHAD_A" = "10"
+    Info (12134): Parameter "NUMWORDS_A" = "1024"
+    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "//wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/db/processor.ram0_dmem_351e6b.hdl.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_a0q1.tdf
+    Info (12023): Found entity 1: altsyncram_a0q1 File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/db/altsyncram_a0q1.tdf Line: 28
+Warning (12241): 11 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "MemWrite" is stuck at GND File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 5
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/output_files/processor.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "reset" File: //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/hdl/top_arm.sv Line: 2
+Info (21057): Implemented 1357 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 65 output pins
+    Info (21061): Implemented 1282 logic cells
+    Info (21064): Implemented 8 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 60 warnings
+    Info: Peak virtual memory: 4841 megabytes
+    Info: Processing ended: Sat Oct 23 22:10:40 2021
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:33
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in //wsl.localhost/Ubuntu-20.04/home/ealvarado/Documents/tec/ce4301-arquitectura-computadores/HDL-ARMv4-micro-arquitecture/Processor/syntesis/output_files/processor.map.smsg.
+
+

@@ -95,3 +95,19 @@ output.txt
 # .NET Core build folders
 **/bin/
 **/obj/
+
+### react ###
+.DS_*
+*.log
+logs
+**/*.backup.*
+**/*.back.*
+
+**/node_modules/
+bower_components
+
+*.sublime*
+
+psd
+thumb
+sketch

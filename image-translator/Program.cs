@@ -1,5 +1,4 @@
 ﻿using System.Drawing;
-using System.Linq;
 
 string path = "";
 string outputName = "out.img";
@@ -22,38 +21,50 @@ foreach (var arg in Environment.GetCommandLineArgs().Select((value, i) => new { 
 if (String.IsNullOrEmpty(path))
     throw new Exception("A path must be specified");
 
-int lenght = Byte.MaxValue * Byte.MaxValue * 3;
+const int MaxValue = Byte.MaxValue + 1;
+
+int length = MaxValue * MaxValue * 3;
 Bitmap image = new Bitmap(path);
-byte[] imgMatrix = new byte[lenght];
+byte[] imgMatrix = new byte[length];
 
 Console.WriteLine("Converting image to Byte Array...");
 
-for (byte i = 0; i < Byte.MaxValue; i++)
-    for (byte j = 0; j < Byte.MaxValue; j++)
+for (int i = 0; i < MaxValue; i++)
+    for (int j = 0; j < MaxValue; j++)
     {
         Color pixel = image.GetPixel(j, i);
-        int position = Byte.MaxValue * j + i;
+        int position = MaxValue * j + i;
         
-        imgMatrix[Byte.MaxValue * 0 + position] = pixel.R;
-        imgMatrix[Byte.MaxValue * 1 + position] = pixel.G;
-        imgMatrix[Byte.MaxValue * 2 + position] = pixel.B;
+        int rPos = MaxValue * MaxValue * 0 + position;
+        int gPos = MaxValue * MaxValue * 1 + position;
+        int bPos = MaxValue * MaxValue * 2 + position;
+
+        imgMatrix[rPos] = pixel.R;
+        imgMatrix[gPos] = pixel.G;
+        imgMatrix[bPos] = pixel.B;
+
+        Console.WriteLine($"<[{rPos}]:{pixel.R},[{gPos}]:{pixel.G},[{bPos}]:{pixel.B}>");
     }
 
 string values = "";
 
 Console.WriteLine("Converting color values to text...");
-for (int i = 1; i <= lenght; i++)
+using ProgressBar progress = new ProgressBar();
+for (int i = 1; i <= length; i++)
 {
     values += imgMatrix[i - 1].ToString();
     
-    bool isEndOfLine = i % (Byte.MaxValue) == 0;
+    bool isEndOfLine = i % MaxValue == 0;
 
     if(isEndOfLine)
         values += "\n";
     else
         values += " ";
+
+    progress.Report((double) (i + 1) / length);
 }
 
+Console.WriteLine();
 Console.WriteLine("Writing file...");
 await File.WriteAllTextAsync($"./out/{outputName}", values);
 Console.WriteLine("Enjoy your new Image!");

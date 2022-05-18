@@ -1,0 +1,20 @@
+Fitter Status : Successful - Wed May 18 11:32:07 2022
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : SIMD_Proc
+Top-level Entity Name : Pipeline_SIMD
+Family : Cyclone V
+Device : 5CSEMA5F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 356 / 32,070 ( 1 % )
+Total registers : 410
+Total pins : 184 / 457 ( 40 % )
+Total virtual pins : 0
+Total block memory bits : 2,097,152 / 4,065,280 ( 52 % )
+Total RAM Blocks : 256 / 397 ( 64 % )
+Total DSP Blocks : 0 / 87 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0 / 6 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

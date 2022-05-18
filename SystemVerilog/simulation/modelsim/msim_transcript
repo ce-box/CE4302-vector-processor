@@ -1,0 +1,118 @@
+# Reading pref.tcl
+# do SIMD_Proc_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/Usuario/Documents/tec/CE4302-vector-processor/SystemVerilog/hdl/generic_blocks {C:/Users/Usuario/Documents/tec/CE4302-vector-processor/SystemVerilog/hdl/generic_blocks/mux_4to1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:25:02 on May 18,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Usuario/Documents/tec/CE4302-vector-processor/SystemVerilog/hdl/generic_blocks" C:/Users/Usuario/Documents/tec/CE4302-vector-processor/SystemVerilog/hdl/generic_blocks/mux_4to1.sv 
+# -- Compiling module mux_4to1
+# 
+# Top level modules:
+# 	mux_4to1
+# End time: 13:25:02 on May 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Usuario/Documents/tec/CE4302-vector-processor/SystemVerilog/hdl/generic_blocks {C:/Users/Usuario/Documents/tec/CE4302-vector-processor/SystemVerilog/hdl/generic_blocks/mux_2to1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:25:02 on May 18,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Usuario/Documents/tec/CE4302-vector-processor/SystemVerilog/hdl/generic_blocks" C:/Users/Usuario/Documents/tec/CE4302-vector-processor/SystemVerilog/hdl/generic_blocks/mux_2to1.sv 
+# -- Compiling module mux_2to1
+# 
+# Top level modules:
+# 	mux_2to1
+# End time: 13:25:02 on May 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Usuario/Documents/tec/CE4302-vector-processor/SystemVerilog/hdl/generic_blocks {C:/Users/Usuario/Documents/tec/CE4302-vector-processor/SystemVerilog/hdl/generic_blocks/ALU_Vec.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:25:02 on May 18,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Usuario/Documents/tec/CE4302-vector-processor/SystemVerilog/hdl/generic_blocks" C:/Users/Usuario/Documents/tec/CE4302-vector-processor/SystemVerilog/hdl/generic_blocks/ALU_Vec.sv 
+# -- Compiling module ALU_Vec
+# 
+# Top level modules:
+# 	ALU_Vec
+# End time: 13:25:03 on May 18,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Usuario/Documents/tec/CE4302-vector-processor/SystemVerilog/hdl/generic_blocks {C:/Users/Usuario/Documents/tec/CE4302-vector-processor/SystemVerilog/hdl/generic_blocks/ALU_NBITS.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:25:03 on May 18,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Usuario/Documents/tec/CE4302-vector-processor/SystemVerilog/hdl/generic_blocks" C:/Users/Usuario/Documents/tec/CE4302-vector-processor/SystemVerilog/hdl/generic_blocks/ALU_NBITS.sv 
+# -- Compiling module ALU_NBITS
+# 
+# Top level modules:
+# 	ALU_NBITS
+# End time: 13:25:03 on May 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/Usuario/Documents/tec/CE4302-vector-processor/SystemVerilog/tests {C:/Users/Usuario/Documents/tec/CE4302-vector-processor/SystemVerilog/tests/alu_vec_test.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:25:03 on May 18,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Usuario/Documents/tec/CE4302-vector-processor/SystemVerilog/tests" C:/Users/Usuario/Documents/tec/CE4302-vector-processor/SystemVerilog/tests/alu_vec_test.sv 
+# -- Compiling module alu_vec_test
+# 
+# Top level modules:
+# 	alu_vec_test
+# End time: 13:25:03 on May 18,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  alu_vec_test
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" alu_vec_test 
+# Start time: 13:25:03 on May 18,2022
+# Loading sv_std.std
+# Loading work.alu_vec_test
+# Loading work.ALU_Vec
+# Loading work.ALU_NBITS
+# Loading work.mux_4to1
+# Loading work.mux_2to1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Testbench para Sumador Vectorial
+# Correcto
+# Correcto
+# Correcto
+# Correcto
+# Correcto
+# Correcto
+# Correcto
+# Correcto
+# Testbench para Multiplicador Vectorial
+# Correcto
+# Correcto
+# Correcto
+# Correcto
+# Correcto
+# Correcto
+# Correcto
+# Correcto
+# Testbench para Restador Vectorial
+# Correcto
+# Correcto
+# Correcto
+# Correcto
+# Correcto
+# Correcto
+# Correcto
+# Correcto
+# Testbench para Divisor Vectorial
+# Correcto
+# Correcto
+# Correcto
+# Correcto
+# Correcto
+# Correcto
+# Correcto
+# Correcto
+# End time: 13:26:09 on May 18,2022, Elapsed time: 0:01:06
+# Errors: 0, Warnings: 0

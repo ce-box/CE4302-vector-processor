@@ -1,0 +1,155 @@
+Flow report for SIMD_Proc
+Wed May 18 13:23:54 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Flow Summary                                                                  ;
++---------------------------------+---------------------------------------------+
+; Flow Status                     ; Successful - Wed May 18 13:23:53 2022       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; SIMD_Proc                                   ;
+; Top-level Entity Name           ; ALU_Vec                                     ;
+; Family                          ; Cyclone V                                   ;
+; Device                          ; 5CSEMA5F31C6                                ;
+; Timing Models                   ; Final                                       ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 770                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 16                                          ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 05/18/2022 13:23:26 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; SIMD_Proc           ;
++-------------------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                             ;
++--------------------------------------+----------------------------------------+---------------+-------------+----------------+
+; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
++--------------------------------------+----------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID                ; 273184159069720.165290180619856        ; --            ; --          ; --             ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; hazard_test    ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; alu_vec_test   ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; imem_test      ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; alu_test       ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; extend_test    ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; fetch_test     ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; pipeline_test  ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; alu_vec_test                           ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (SystemVerilog)        ; <None>        ; --          ; --             ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_FILE                  ; tests/hazard_test.sv                   ; --            ; --          ; hazard_test    ;
+; EDA_TEST_BENCH_FILE                  ; tests/alu_vec_test.sv                  ; --            ; --          ; alu_vec_test   ;
+; EDA_TEST_BENCH_FILE                  ; tests/imem_test.sv                     ; --            ; --          ; imem_test      ;
+; EDA_TEST_BENCH_FILE                  ; tests/alu_test.sv                      ; --            ; --          ; alu_test       ;
+; EDA_TEST_BENCH_FILE                  ; tests/extend_test.sv                   ; --            ; --          ; extend_test    ;
+; EDA_TEST_BENCH_FILE                  ; tests/fetch_test.sv                    ; --            ; --          ; fetch_test     ;
+; EDA_TEST_BENCH_FILE                  ; tests/pipeline_test.sv                 ; --            ; --          ; pipeline_test  ;
+; EDA_TEST_BENCH_MODULE_NAME           ; hazard_test                            ; --            ; --          ; hazard_test    ;
+; EDA_TEST_BENCH_MODULE_NAME           ; alu_vec_test                           ; --            ; --          ; alu_vec_test   ;
+; EDA_TEST_BENCH_MODULE_NAME           ; imem_test                              ; --            ; --          ; imem_test      ;
+; EDA_TEST_BENCH_MODULE_NAME           ; alu_test                               ; --            ; --          ; alu_test       ;
+; EDA_TEST_BENCH_MODULE_NAME           ; extend_test                            ; --            ; --          ; extend_test    ;
+; EDA_TEST_BENCH_MODULE_NAME           ; fetch_test                             ; --            ; --          ; fetch_test     ;
+; EDA_TEST_BENCH_MODULE_NAME           ; pipeline_test                          ; --            ; --          ; pipeline_test  ;
+; EDA_TEST_BENCH_NAME                  ; pipeline_test                          ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; alu_test                               ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; extend_test                            ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; hazard_test                            ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; imem_test                              ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; fetch_test                             ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; alu_vec_test                           ; --            ; --          ; eda_simulation ;
+; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --             ;
+; MISC_FILE                            ; hdl/memories/RamV_bb.v                 ; --            ; --          ; --             ;
+; MISC_FILE                            ; hdl/memories/RAM_bb.v                  ; --            ; --          ; --             ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; ALU_Vec     ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; ALU_Vec     ; Top            ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; ALU_Vec     ; Top            ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --             ;
+; TOP_LEVEL_ENTITY                     ; ALU_Vec                                ; SIMD_Proc     ; --          ; --             ;
++--------------------------------------+----------------------------------------+---------------+-------------+----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:27     ; 1.0                     ; 4905 MB             ; 00:00:32                           ;
+; Total                ; 00:00:27     ; --                      ; --                  ; 00:00:32                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; LAPTOP-7LHI6S0S  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off SIMD_Proc -c SIMD_Proc
+
+
+
